@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeThom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="Icon" href="images/profilico.ico">
+    
+</head>
+<body>
+    <header>
+        <h1>BeThom</h1>
+        <nav>
+        <ul class="menu">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#titre3">Blog</a></li>
+            <li><a href="#portfolio">portfolio</a></li>
+            <li><a href="#footer">Contact</a></li>
+        </ul>
+        </nav>
+    </header>
+    
+</body>
+    <Main>
+        <section id="accueil">
+            <div class="accueil">
+                <h2>Hi, je suis Thomas<br>Graphiste</h2>
+                <p id="presentation">Passionné par le code et le design, j’aide les entreprises et les créateurs à développer des sites modernes, performants et adaptés à leurs besoins. Mon objectif est de transformer vos idées en expériences numériques fluides et efficaces.</p>       
+                <a href="#" id="cv" class="button">Télécharger mon CV</a>
+            </div> 
+            <div class="photoprofil">
+                <img src="images/profil.png" alt="Photo de profil">
+            </div>
+        </section>
+
+        <section class="articles">
+            <div class="articles-header">
+                <h2 id="titre3">Articles récents</h2>
+                <a href="#" class="view-all">View all</a>
+            </div>
+
+            <div class="articles-grid">
+                <article class="card">
+                <h3>Créer un design system à partir de zéro</h3>
+            <div class="meta">
+                    <span>12 Feb 2020</span>
+                    <span class="sep">|</span>
+                    <span>Design, Pattern</span>
+            </div>
+                <p>
+                    Dans cet article, je partage mon approche pour mettre en place un design system clair et efficace, afin de garantir la cohérence visuelle d’un projet digital.
+                </p>
+                </article>
+
+                <article class="card">
+                <h3>Créer des icônes pixel perfect dans Figma</h3>
+            <div class="meta">
+                    <span>12 Feb 2020</span>
+                    <span class="sep">|</span>
+                    <span>Figma, Icon Design</span>
+            </div>
+                <p>
+                    Découvrez mes techniques pour concevoir des icônes nettes et précises dans Figma, adaptées aussi bien au web qu’aux applications mobiles.
+                </p>
+                </article>
+            </div>
+        </section>
+        <section id="portfolio">
+                    <h3 id="titre3">Travaux en vedette</h3>
+            <div class="projet1">
+                <div class="photo1">
+                    <img src="images/port1.png" alt="Projet 1">
+                </div>
+                <div class="txt1">
+                    <h3>Design de tableaux de bord</h3>
+                    <span class="badge">2020</span>
+                    <span class="categorie">Dashboard</span>
+                    <p id="textport">Un projet de conception d'interface utilisateur pour une plateforme de gestion. L'objectif était de proposer un tableau de bord intuitif et esthétique.</p>
+                </div>
+            </div>
+            <div class="projet2">
+                <div class="photo2">
+                    <img src="images/port2.png" alt="Projet 2">
+                </div>
+                <div class="txt2">
+                    <h3>Portraits vibrants de 2020</h3>
+                    <span class="badge">2018</span>
+                    <span class="categorie">Illustration</span>
+                    <p id="textport">Série d'illustration numériques réalisées avec une palette de couleurs audacieuses, explorant l'identité et l'émotion à travers le portrait</p>
+                </div>
+            </div>
+            <div class="projet3">
+                <div class="photo3">
+                    <img src="images/port3.png" alt="Projet 3">
+                </div>
+                <div class="txt3">
+                    <h3>36 jours de typographie</h3>
+                    <span class="badge">2018</span>
+                    <span class="categorie">Typographie</span>
+                    <p id="textport">Un projet créatif consistant à explorer et styliser les caractères de la typographie malayalam à travers une série de visuels graphiques.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section id="footer">
+                <h3 id="titre3">Me contacter</h3>
+            <div class="pied-de-page">
+            <div class="contact">
+                <h2>Parlons-en</h2>
+                <p>Vous avez une grande idée ou un projet à développer et besoin d'aide? Contactez-moi, je serai ravi d'échanger avec vous et de vous accompagner.</p>
+                <h2>Email</h2>
+                <p>beebs@gmail.com</p>
+                <h2>Socials</h2>
+                    <a href="www.intagram.com">Instagram</a><br>
+                    <a href="www.twitter.com">Twitter</a><br>
+                    <a href="www.faccebook.com">Facebook</a><br>  
+            </div>
+            <div class="formulaire">
+                <form action="/submit-votre-formulaire" method="post">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" required><br><br>
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="service">Quel service vous intéresse :</label>
+                    <input type="text" id="service" name="service"><br><br>
+                    <label for="budget">Budget :</label>
+                    <input type="number" id="budget" name="budget"><br><br>
+                    <label for="message">Message :</label><br>
+                    <textarea id="message" name="message"></textarea><br><br>
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div> 
+            </div>
+        </section>   
+    </footer>
+</body>     
+</html>
