@@ -1,120 +1,161 @@
-/*************************************************
-  🌍 STYLES GÉNÉRAUX
-*************************************************/
+
+/* Définition du style global du corps de la page */
+
 body {
-  font-family: "Poppins", sans-serif; /* Police principale */
-  margin-top: 10px;
-  margin-left: 150px;
-  margin-right: 150px;
+    font-family: "Poppins", sans-serif;
+    margin-top: 10px;
+    margin-left: 150px;
+    margin-right: 150px;
+    
 }
+
+/* Titres principaux */
 
 h1 {
-  font-size: 32px; /* Taille principale des titres */
+    font-size: 32px;
 }
 
-li {
-  padding-left: 0%; /* Supprime l’indentation par défaut */
-}
+/* En-tête de la page */
 
-/*************************************************
-  🧭 EN-TÊTE (HEADER)
-*************************************************/
 header {
-  display: flex; /* Mise en page horizontale */
-  justify-content: space-between; /* Espacement entre les éléments */
-  padding-left: 150px;
-  padding-right: 150px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 150px;
+    padding-right: 150px;
 }
+
+/* Liens dans l’en-tête */
 
 header a {
-  text-decoration: none; /* Supprime le soulignement */
-  color: inherit; /* Garde la couleur du texte parent */
-  font-weight: bold; /* Met en gras */
-  padding-left: 150px;
+    text-decoration: none; 
+    color: inherit; 
+    font-weight: bold; 
+    padding-left: 150px;
 }
 
-/* Bouton "CV" */
+/* Bouton CV */
+
 #cv {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #FF6464;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  text-align: center;
-  font-size: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF6464;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 20px;
 }
 
-/*************************************************
-  👤 SECTION ACCUEIL / PRÉSENTATION
-*************************************************/
-#accueil {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 150px;
-  padding-right: 150px;
-}
+/* Photo de profil arrondie avec ombre */
 
 .photoprofil img {
-  width: 200px;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  box-shadow: 0 4px 10px #547e8b; /* Ombre douce */
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 4px 10px #547e8b;
+    
 }
 
-#presentation {
-  width: 60%; /* Largeur du bloc texte */
+/* Section d’accueil */
+
+#accueil {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 150px;
+    padding-right: 150px;
 }
 
-/*************************************************
-  🧱 SECTION TRAVAUX / PROJETS
-*************************************************/
-#travaux {
-  padding-left: 150px;
+/* Section blog (mise en page horizontale) */
+
+.blog {
+    display: flex;
+    justify-content: space-between;  
 }
 
-/* Conteneur global des projets */
+/* Pied de page */
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Alignement à droite pour certains liens */
+
+.lien-droite {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Styles communs aux projets */
+
 .projet1, .projet2, .projet3 {
   display: flex;
   align-items: flex-start;
   gap: 30px;
   padding: 20px 0;
   border-bottom: 1px solid #e5e5e5;
-  max-width: 1000px;
+  width: 100%;;
   margin: 0 auto;
+  margin-bottom: 0%;
+  margin-left: 0%;
 }
 
-/* Images des projets */
+/* Photos des projets */
+
 .photo1 img, .photo2 img, .photo3 img {
   width: 246px;
   height: 180px;
   border-radius: 6px;
   object-fit: cover;
+  opacity: 1;
+  transform: rotate(0deg);
+  margin-left: 0%;
   padding-left: 150px;
 }
 
 /* Textes des projets */
+
 .txt1, .txt2, .txt3 {
-  justify-content: flex-end;
-  margin-left: 150px;
+    justify-content:flex-end;
+    margin-left: 150px;
 }
 
-/*************************************************
-  📰 SECTION ARTICLES / BLOG
-*************************************************/
-.articles {
-  background-color: #f0f8ff; /* Bleu clair */
-  font-family: "Poppins", sans-serif;
-  margin-top: 25px;
-  padding-bottom: 50px;
+/* Badge de catégorie */
+
+.badge {
+  background-color: #0f1c48;
+  color: white;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+/* Catégorie en gris clair */
+
+.categorie {
+  color: #a0a7b3;
+  font-size: 16px;
 }
 
 /* En-tête des articles */
+
+.articles {
+  background-color: #f0f8ff; /* Bleu très clair */
+  font-family: "Poppins", sans-serif;
+  margin-top: 25px;
+  padding-bottom: 50px;
+
+}
+
+/* Titre de la section articles */
+
 .articles-header {
   display: flex;
   justify-content: space-between;
@@ -127,10 +168,12 @@ header a {
   font-weight: 600;
   color: #1d1d2c;
   margin: 0;
+  padding: 0%;
   padding-left: 150px;
 }
 
-/* Lien "Voir tout" */
+/* Lien “view all” */
+
 .view-all {
   color: #00aaff;
   text-decoration: none;
@@ -139,7 +182,8 @@ header a {
   padding-right: 150px;
 }
 
-/* Grille d’articles */
+/* Grille des articles */
+
 .articles-grid {
   display: flex;
   justify-content: space-between;
@@ -148,7 +192,8 @@ header a {
   padding-right: 150px;
 }
 
-/* Cartes d’articles */
+/* Carte d’article */
+
 .card {
   background: white;
   border-radius: 8px;
@@ -156,7 +201,16 @@ header a {
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   flex: 1 1 45%;
   max-width: 500px;
+  width: 543;
+  height: 295;
+  opacity: 1;
+  top: 677px;
+  left: 122px;
+  border-radius: 4px;
+
 }
+
+/* Titre d’article */
 
 .card h3 {
   font-size: 20px;
@@ -165,7 +219,8 @@ header a {
   margin-top: 0;
 }
 
-/* Métadonnées (date, auteur, etc.) */
+/* Informations méta (date, auteur, etc.) */
+
 .meta {
   display: flex;
   align-items: center;
@@ -179,7 +234,8 @@ header a {
   color: #c0c6cf;
 }
 
-/* Paragraphe dans la carte */
+/* Paragraphe d’article */
+
 .card p {
   font-size: 15px;
   color: #1d1d2c;
@@ -187,55 +243,71 @@ header a {
   margin: 0;
 }
 
-/* Éléments d’identification visuelle */
-.badge {
-  background-color: #0f1c48;
-  color: white;
-  font-weight: 700;
-  padding: 4px 12px;
-  border-radius: 999px;
-  font-size: 14px;
+/* Section présentation */
+
+#presentation {
+    width: 60%; 
 }
 
-.categorie {
-  color: #a0a7b3;
-  font-size: 16px;
+/* Section travaux */
+
+#travaux {
+    padding-left: 150px;
 }
 
-/*************************************************
-  ✉️ SECTION CONTACT / FORMULAIRE
-*************************************************/
+/* Pied de page (version finale) */
+
+.pied-de-page {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 150px;
+    padding-right: 150px;
+
+}
+
+/* Titre de la 3e section */
+
+#titre3 {
+    padding-left: 150px;
+    color: #21243D;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 60px;
+    letter-spacing: 0px;
+
+}
+
+/* Bloc de contact */
+
 .contact {
-  width: 50%;
+    width: 50%;
 }
+
+/* Labels de formulaire */
 
 form label {
   display: block;
   margin-bottom: 5px;
 }
 
+/* Champs de formulaire */
+
 form input,
 form textarea {
-  width: 400px;
+  width: 400px; 
 }
 
-/*************************************************
-  📜 TITRES / BLOCS SECONDAIRES
-*************************************************/
-#titre3 {
-  padding-left: 150px;
-  color: #21243D;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 60px;
+/* Liens du footer */
+
+#footer a {
+    color: black;
 }
 
-/*************************************************
-  🧩 MENU DE NAVIGATION
-*************************************************/
+/* Menu de navigation */
+
 .menu {
   display: flex;
-  gap: 5px;
+  gap: 5px; 
   list-style: none;
   padding: 0;
   margin: 0;
@@ -247,28 +319,7 @@ form textarea {
   color: black;
 }
 
-/*************************************************
-  ⚓ PIED DE PAGE (FOOTER)
-*************************************************/
-#footer {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+li {
+    padding-left: 0%;
 }
 
-#footer a {
-  color: black;
-}
-
-.pied-de-page {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 150px;
-  padding-right: 150px;
-}
-
-/* Alignement de certains liens à droite */
-.lien-droite {
-  display: flex;
-  justify-content: flex-end;
-}
