@@ -1,77 +1,84 @@
-
+/*************************************************
+  🌍 STYLES GÉNÉRAUX
+*************************************************/
 body {
-    font-family: "Poppins", sans-serif;
-    margin-top: 10px;
-    margin-left: 150px;
-    margin-right: 150px;
-    
+  font-family: "Poppins", sans-serif; /* Police principale */
+  margin-top: 10px;
+  margin-left: 150px;
+  margin-right: 150px;
 }
 
 h1 {
-    font-size: 32px;
+  font-size: 32px; /* Taille principale des titres */
 }
 
+li {
+  padding-left: 0%; /* Supprime l’indentation par défaut */
+}
+
+/*************************************************
+  🧭 EN-TÊTE (HEADER)
+*************************************************/
 header {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 150px;
-    padding-right: 150px;
+  display: flex; /* Mise en page horizontale */
+  justify-content: space-between; /* Espacement entre les éléments */
+  padding-left: 150px;
+  padding-right: 150px;
 }
 
 header a {
-    text-decoration: none; 
-    color: inherit; 
-    font-weight: bold; 
-    padding-left: 150px;
+  text-decoration: none; /* Supprime le soulignement */
+  color: inherit; /* Garde la couleur du texte parent */
+  font-weight: bold; /* Met en gras */
+  padding-left: 150px;
 }
 
+/* Bouton "CV" */
 #cv {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #FF6464;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    font-size: 20px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #FF6464;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+}
+
+/*************************************************
+  👤 SECTION ACCUEIL / PRÉSENTATION
+*************************************************/
+#accueil {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 150px;
+  padding-right: 150px;
 }
 
 .photoprofil img {
-    width: 200px;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    box-shadow: 0 4px 10px #547e8b;
-    
+  width: 200px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 4px 10px #547e8b; /* Ombre douce */
 }
 
-#accueil {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 150px;
-    padding-right: 150px;
+#presentation {
+  width: 60%; /* Largeur du bloc texte */
 }
 
-.blog {
-    display: flex;
-    justify-content: space-between;  
+/*************************************************
+  🧱 SECTION TRAVAUX / PROJETS
+*************************************************/
+#travaux {
+  padding-left: 150px;
 }
 
-#footer {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.lien-droite {
-    display: flex;
-    justify-content: flex-end;
-}
-
+/* Conteneur global des projets */
 .projet1, .projet2, .projet3 {
   display: flex;
   align-items: flex-start;
@@ -80,26 +87,107 @@ header a {
   border-bottom: 1px solid #e5e5e5;
   max-width: 1000px;
   margin: 0 auto;
-  margin-bottom: 0%;
-  margin-left: 0%;
 }
 
+/* Images des projets */
 .photo1 img, .photo2 img, .photo3 img {
   width: 246px;
   height: 180px;
   border-radius: 6px;
   object-fit: cover;
-  opacity: 1;
-  transform: rotate(0deg);
-  margin-left: 0%;
   padding-left: 150px;
 }
 
+/* Textes des projets */
 .txt1, .txt2, .txt3 {
-    justify-content:flex-end;
-    margin-left: 150px;
+  justify-content: flex-end;
+  margin-left: 150px;
 }
 
+/*************************************************
+  📰 SECTION ARTICLES / BLOG
+*************************************************/
+.articles {
+  background-color: #f0f8ff; /* Bleu clair */
+  font-family: "Poppins", sans-serif;
+  margin-top: 25px;
+  padding-bottom: 50px;
+}
+
+/* En-tête des articles */
+.articles-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.articles-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1d1d2c;
+  margin: 0;
+  padding-left: 150px;
+}
+
+/* Lien "Voir tout" */
+.view-all {
+  color: #00aaff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  padding-right: 150px;
+}
+
+/* Grille d’articles */
+.articles-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+/* Cartes d’articles */
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  flex: 1 1 45%;
+  max-width: 500px;
+}
+
+.card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1d1d2c;
+  margin-top: 0;
+}
+
+/* Métadonnées (date, auteur, etc.) */
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #7c8794;
+  margin: 12px 0;
+}
+
+.meta .sep {
+  color: #c0c6cf;
+}
+
+/* Paragraphe dans la carte */
+.card p {
+  font-size: 15px;
+  color: #1d1d2c;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Éléments d’identification visuelle */
 .badge {
   background-color: #0f1c48;
   color: white;
@@ -114,118 +202,11 @@ header a {
   font-size: 16px;
 }
 
-.articles {
-  background-color: #f0f8ff; /* Bleu très clair */
-  font-family: "Poppins", sans-serif;
-  margin-top: 25px;
-  padding-bottom: 50px;
-
-}
-
-.articles-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 40px;
-}
-
-.articles-header h2 {
-  font-size: 20px;
-  font-weight: 600;
-  color: #1d1d2c;
-  margin: 0;
-  padding: 0%;
-  padding-left: 150px;
-}
-
-.view-all {
-  color: #00aaff;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  padding-right: 150px;
-}
-
-.articles-grid {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding-left: 150px;
-  padding-right: 150px;
-}
-
-.card {
-  background: white;
-  border-radius: 8px;
-  padding: 24px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  flex: 1 1 45%;
-  max-width: 500px;
-  width: 543;
-  height: 295;
-  opacity: 1;
-  top: 677px;
-  left: 122px;
-  border-radius: 4px;
-
-}
-
-.card h3 {
-  font-size: 20px;
-  font-weight: 700;
-  color: #1d1d2c;
-  margin-top: 0;
-}
-
-.meta {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 14px;
-  color: #7c8794;
-  margin: 12px 0;
-}
-
-.meta .sep {
-  color: #c0c6cf;
-}
-
-.card p {
-  font-size: 15px;
-  color: #1d1d2c;
-  line-height: 1.5;
-  margin: 0;
-}
-
-#presentation {
-    width: 60%; 
-}
-
-#travaux {
-    padding-left: 150px;
-}
-
-.pied-de-page {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 150px;
-    padding-right: 150px;
-
-}
-
-#titre3 {
-    padding-left: 150px;
-    color: #21243D;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 60px;
-    letter-spacing: 0px;
-
-}
-
-
+/*************************************************
+  ✉️ SECTION CONTACT / FORMULAIRE
+*************************************************/
 .contact {
-    width: 50%;
+  width: 50%;
 }
 
 form label {
@@ -235,16 +216,26 @@ form label {
 
 form input,
 form textarea {
-  width: 400px; 
+  width: 400px;
 }
 
-#footer a {
-    color: black;
+/*************************************************
+  📜 TITRES / BLOCS SECONDAIRES
+*************************************************/
+#titre3 {
+  padding-left: 150px;
+  color: #21243D;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 60px;
 }
 
+/*************************************************
+  🧩 MENU DE NAVIGATION
+*************************************************/
 .menu {
   display: flex;
-  gap: 5px; /* ajuste cet espace selon ce que tu veux */
+  gap: 5px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -256,6 +247,28 @@ form textarea {
   color: black;
 }
 
-li {
-    padding-left: 0%;
+/*************************************************
+  ⚓ PIED DE PAGE (FOOTER)
+*************************************************/
+#footer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+#footer a {
+  color: black;
+}
+
+.pied-de-page {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+/* Alignement de certains liens à droite */
+.lien-droite {
+  display: flex;
+  justify-content: flex-end;
 }
