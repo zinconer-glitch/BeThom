@@ -465,57 +465,63 @@ li {
 
   /* --- Icône burger --- */
   .menu-icon {
-    display: block;
-    font-size: 32px;
-    cursor: pointer;
-    color: #000;
-    position: absolute;
-    right: 30px; /* menu un peu plus à gauche */
-    top: 20px;
-    z-index: 10;
-  }
+  display: block;
+  font-size: 30px;
+  cursor: pointer;
+  color: #000;
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  z-index: 100;
+}
 
-  /* --- Menu masqué par défaut --- */
-  #menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    border-top: 1px solid #ccc;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    padding: 0;
-  }
+/* Menu caché par défaut */
+#menu {
+  display: none;
+  position: absolute;
+  top: 60px;                /* juste sous le burger */
+  right: 25px;              /* aligne avec le burger */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;       /* angles arrondis */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 180px;             /* petit cadre */
+  padding: 10px 0;
+  text-align: center;
+  z-index: 99;
+}
 
-  /* --- Menu actif au clic --- */
-  #menu.active {
-    display: block;
-  }
+/* Menu visible au clic */
+#menu.active {
+  display: block;
+}
 
-  /* --- Liens verticaux --- */
-  #menu ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    list-style: none;
-    gap: 10px;
-    padding: 10px 0;
-    margin: 0;
-  }
+/* Liste verticale propre */
+#menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 8px;
+}
 
-  #menu ul li a {
-    text-decoration: none;
-    color: #000;
-    font-weight: 600;
-    font-size: 16px;
-    padding: 5px 0;
-    transition: color 0.2s;
-  }
+#menu ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 5px 0;
+  width: 100%;
+  transition: background 0.2s, color 0.2s;
+}
 
-  #menu ul li a:hover {
-    color: #7a3cff;
-  }
+/* Effet de survol */
+#menu ul li a:hover {
+  background-color: #f0f0f0;
+  color: #7a3cff;
+}
 
   /* --- Accueil : colonne --- */
   #accueil {
