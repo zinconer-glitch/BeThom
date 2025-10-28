@@ -594,7 +594,7 @@ li {
 }
 
 .txt1, .txt2, .txt3 {
-  width: 60%;                /* garde la même largeur que la photo */
+ 
   margin: 0 auto;            /* centre dans la page */
   text-align: center;
 }
