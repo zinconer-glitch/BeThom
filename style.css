@@ -235,14 +235,35 @@ header {
    SECTION TRAVAUX
 ===================================================== */
 
-#travaux {
-  padding-left: 150px;
+.projet1, .projet2, .projet3 {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 20px 0;
+  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
+  margin: 0;               /* supprime décalages */
+  padding-left: 150px;     /* même repère que le blog */
+  padding-right: 150px;    /* même repère à droite */
 }
 
-/* Lien aligné à droite */
-.lien-droite {
-  display: flex;
-  justify-content: flex-end;
+/* On aligne toutes les images */
+.photo1 img, .photo2 img, .photo3 img {
+  width: 220px;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
+
+/* On retire le décalage du texte */
+.txt1, .txt2, .txt3 {
+  margin-left: 40px !important; /* même alignement pour tout */
+  max-width: 600px;
+}
+
+/* Dernier projet sans bordure */
+.projet3 {
+  border-bottom: none;
 }
 
 /* =====================================================
@@ -262,7 +283,7 @@ header {
 }
 
 /* Titre section 3 */
-#titre3 {
+.titre3 {
   padding-left: 150px;
   color: #21243D;
   font-weight: 400;
