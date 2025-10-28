@@ -475,46 +475,51 @@ li {
   z-index: 100;
 }
 
-/* Menu caché par défaut */
+/* Menu masqué par défaut */
 #menu {
   display: none;
   position: absolute;
-  top: 60px;                /* juste sous le burger */
-  right: 25px;              /* aligne avec le burger */
+  top: 55px;                /* légèrement sous le burger */
+  right: 15px;              /* le cadre “colle” au burger */
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 8px;       /* angles arrondis */
+  border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 180px;             /* petit cadre */
-  padding: 10px 0;
-  text-align: center;
+  width: 180px;             /* petit menu compact */
+  padding: 8px 0;
   z-index: 99;
+  text-align: center;
 }
 
-/* Menu visible au clic */
+/* Apparition du menu au clic */
 #menu.active {
   display: block;
 }
 
-/* Liste verticale propre */
+/* Liens du menu */
 #menu ul {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;  /* texte aligné à gauche pour un effet "popup" */
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 8px;
+}
+
+#menu ul li {
+  width: 100%;
 }
 
 #menu ul li a {
+  display: block;
+  width: 100%;
+  padding: 8px 15px;
   text-decoration: none;
   color: #000;
   font-weight: 600;
   font-size: 15px;
-  padding: 5px 0;
-  width: 100%;
   transition: background 0.2s, color 0.2s;
+  border-radius: 6px;
 }
 
 /* Effet de survol */
@@ -597,5 +602,14 @@ li {
   .contact-info {
     display: none;
   }
+
+  .articles-header h2 {
+  white-space: nowrap; /* ✅ empêche le retour à la ligne */
+  line-height: 1.2;    /* ajuste la hauteur du texte */
+}
+
+.view-all {
+  display: none;
+}
 
 }
