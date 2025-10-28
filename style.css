@@ -1,98 +1,100 @@
-
-/* Définition du style global du corps de la page */
+/* =====================================================
+   STYLE GLOBAL
+===================================================== */
 
 body {
-    font-family: "Poppins", sans-serif;
-    margin-top: 10px;
-    margin-left: 150px;
-    margin-right: 150px;
-    
+  font-family: "Poppins", sans-serif;
+  margin-top: 10px;
+  margin-left: 150px;
+  margin-right: 150px;
 }
-
-/* Titres principaux */
 
 h1 {
-    font-size: 32px;
+  font-size: 32px;
 }
 
-/* En-tête de la page */
+/* =====================================================
+   EN-TÊTE / HEADER
+===================================================== */
 
 header {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 150px;
-    padding-right: 150px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 150px;
+  padding-right: 150px;
 }
 
-/* Liens dans l’en-tête */
-
-header a {
-    text-decoration: none; 
-    color: inherit; 
-    font-weight: bold; 
-    padding-left: 150px;
-}
-
-/* Bouton CV */
-
-#cv {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #FF6464;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    font-size: 20px;
-}
-
-/* Photo de profil arrondie avec ombre */
-
-.photoprofil img {
-    width: 200px;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    box-shadow: 0 4px 10px #547e8b;
-    
-}
-
-/* Section d’accueil */
+/* =====================================================
+   SECTION ACCUEIL
+===================================================== */
 
 #accueil {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 150px;
-    padding-right: 150px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 150px;
+  padding-right: 150px;
 }
 
-/* Section blog (mise en page horizontale) */
+#presentation {
+  width: 60%;
+}
+
+/* =====================================================
+   BOUTON CV
+===================================================== */
+
+#cv {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #FF6464;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* =====================================================
+   PHOTO DE PROFIL
+===================================================== */
+
+.photoprofil img {
+  width: 200px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 4px 10px #547e8b;
+}
+
+/* =====================================================
+   SECTION BLOG
+===================================================== */
 
 .blog {
-    display: flex;
-    justify-content: space-between;  
-}
-
-/* Pied de page */
-
-#footer {
   display: flex;
-  flex-direction: column;
-  gap: 40px;
+  justify-content: space-between;
 }
 
-/* Alignement à droite pour certains liens */
-
-.lien-droite {
-    display: flex;
-    justify-content: flex-end;
+.article {
+  width: 100%;
 }
 
-/* Styles communs aux projets */
+/* Lien “view all” */
+.view-all {
+  color: #00aaff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  padding-right: 150px;
+}
+
+/* =====================================================
+   SECTION PROJETS
+===================================================== */
 
 .projet1, .projet2, .projet3 {
   display: flex;
@@ -100,34 +102,31 @@ header a {
   gap: 30px;
   padding: 20px 0;
   border-bottom: 1px solid #e5e5e5;
-  width: 100%;;
+  width: 60%;
   margin: 0 auto;
   margin-bottom: 0%;
   margin-left: 0%;
 }
 
-/* Photos des projets */
+/* Images des projets */
 
 .photo1 img, .photo2 img, .photo3 img {
-  width: 246px;
-  height: 180px;
-  border-radius: 6px;
+  display: block;
+  margin: 0 auto;        /* ✅ centre parfaitement */
+  border-radius: 8px;
+  width: 60%;            /* adapte la taille si besoin */
+  height: auto;
   object-fit: cover;
-  opacity: 1;
-  transform: rotate(0deg);
-  margin-left: 0%;
-  padding-left: 150px;
+  padding-left: 0;       /* annule tout décalage résiduel */
 }
 
 /* Textes des projets */
-
 .txt1, .txt2, .txt3 {
-    justify-content:flex-end;
-    margin-left: 150px;
+  justify-content: flex-end;
+  margin-left: 150px;
 }
 
 /* Badge de catégorie */
-
 .badge {
   background-color: #0f1c48;
   color: white;
@@ -137,30 +136,33 @@ header a {
   font-size: 14px;
 }
 
-/* Catégorie en gris clair */
-
+/* Catégorie grisée */
 .categorie {
   color: #a0a7b3;
   font-size: 16px;
 }
 
-/* En-tête des articles */
+/* =====================================================
+   SECTION ARTICLES / BLOG
+===================================================== */
 
 .articles {
-  background-color: #f0f8ff; /* Bleu très clair */
-  font-family: "Poppins", sans-serif;
-  margin-top: 25px;
-  padding-bottom: 50px;
-
+  background-color: #eaf5ff;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 30px 0;
+  margin-top: 15px;
 }
 
-/* Titre de la section articles */
-
+/* Titre et header d’articles */
 .articles-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
+  margin-top: 10px;
+  margin-left: 150px;
+  margin-right: 150px;
 }
 
 .articles-header h2 {
@@ -168,37 +170,27 @@ header a {
   font-weight: 600;
   color: #1d1d2c;
   margin: 0;
-  padding: 0%;
   padding-left: 150px;
 }
 
-/* Lien “view all” */
-
-.view-all {
-  color: #00aaff;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  padding-right: 150px;
-}
-
-/* Grille des articles */
-
+/* Grille des cartes d’article */
 .articles-grid {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding-left: 150px;
   padding-right: 150px;
+  margin-top: 10px;
+  margin-left: 150px;
+  margin-right: 150px;
 }
 
-/* Carte d’article */
-
+/* Carte article */
 .card {
   background: white;
   border-radius: 8px;
   padding: 24px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   flex: 1 1 45%;
   max-width: 500px;
   width: 543;
@@ -207,11 +199,9 @@ header a {
   top: 677px;
   left: 122px;
   border-radius: 4px;
-
 }
 
 /* Titre d’article */
-
 .card h3 {
   font-size: 20px;
   font-weight: 700;
@@ -219,8 +209,7 @@ header a {
   margin-top: 0;
 }
 
-/* Informations méta (date, auteur, etc.) */
-
+/* Informations meta */
 .meta {
   display: flex;
   align-items: center;
@@ -234,8 +223,7 @@ header a {
   color: #c0c6cf;
 }
 
-/* Paragraphe d’article */
-
+/* Paragraphe article */
 .card p {
   font-size: 15px;
   color: #1d1d2c;
@@ -243,71 +231,186 @@ header a {
   margin: 0;
 }
 
-/* Section présentation */
-
-#presentation {
-    width: 60%; 
-}
-
-/* Section travaux */
+/* =====================================================
+   SECTION TRAVAUX
+===================================================== */
 
 #travaux {
-    padding-left: 150px;
+  padding-left: 150px;
 }
 
-/* Pied de page (version finale) */
+/* Lien aligné à droite */
+.lien-droite {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* =====================================================
+   PIED DE PAGE (FOOTER)
+===================================================== */
+
+#footer {
+ justify-content: flex-start;
+ margin-bottom: 50px;
+}
 
 .pied-de-page {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 150px;
-    padding-right: 150px;
-
+  display: flex;
+  justify-content: space-between;
+  padding-left: 150px;
+  padding-right: 150px;
 }
 
-/* Titre de la 3e section */
-
+/* Titre section 3 */
 #titre3 {
-    padding-left: 150px;
-    color: #21243D;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 60px;
-    letter-spacing: 0px;
-
+  padding-left: 150px;
+  color: #21243D;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 60px;
+  letter-spacing: 0px;
 }
 
 /* Bloc de contact */
-
 .contact {
-    width: 50%;
+  width: 50%;
 }
 
-/* Labels de formulaire */
+/* =====================================================
+   FORMULAIRE DE CONTACT
+===================================================== */
 
+#contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-info {
+  flex: 1 1 45%;
+  box-sizing: border-box;
+}
+
+.contact-form {
+  flex: 1 1 55%;
+  box-sizing: border-box;
+}
+
+
+
+/* Labels */
 form label {
   display: block;
   margin-bottom: 5px;
+  font-weight: 500;
 }
 
-/* Champs de formulaire */
-
+/* Champs et bouton uniformes */
 form input,
+form select,
+form textarea,
+form button {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px;
+  border: none;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  font-size: 15px;
+  color: #333;
+  transition: background-color 0.2s, outline 0.2s;
+}
+
+/* Zone de texte plus haute */
 form textarea {
-  width: 400px; 
+  min-height: 150px;
+  resize: vertical;
 }
 
-/* Liens du footer */
-
-#footer a {
-    color: black;
+/* Focus propre */
+form input:focus,
+form select:focus,
+form textarea:focus {
+  outline: 2px solid #000;
+  background-color: #fff;
 }
 
-/* Menu de navigation */
+/* Bouton envoyer */
+form button {
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: #222;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea,
+.contact-form button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+
+/* =====================================================
+   FIN DE PAGE (SOCIAL, COPYRIGHT)
+===================================================== */
+
+.fin-de-page {
+  width: 100%;
+  background-color: #fff;
+  border-top: 2px solid #7a3cff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  color: #1e1e3f;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #7a3cff;
+}
+
+.fin-de-page p {
+  width: 100%;
+  text-align: center !important;
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* =====================================================
+   NAVIGATION / MENU
+===================================================== */
 
 .menu {
   display: flex;
-  gap: 5px; 
+  gap: 5px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -320,6 +423,173 @@ form textarea {
 }
 
 li {
-    padding-left: 0%;
+  padding-left: 0%;
 }
 
+.menu-icon {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: black;
+  z-index: 10;
+}
+
+/* Menu desktop */
+#menu {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#menu ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+/* =====================================================
+   MENU BURGER RESPONSIVE (≤ 900px)
+===================================================== */
+@media screen and (max-width: 900px) {
+
+  /* --- Header --- */
+  header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  /* --- Icône burger --- */
+  .menu-icon {
+    display: block;
+    font-size: 32px;
+    cursor: pointer;
+    color: #000;
+    position: absolute;
+    right: 30px; /* menu un peu plus à gauche */
+    top: 20px;
+    z-index: 10;
+  }
+
+  /* --- Menu masqué par défaut --- */
+  #menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    padding: 0;
+  }
+
+  /* --- Menu actif au clic --- */
+  #menu.active {
+    display: block;
+  }
+
+  /* --- Liens verticaux --- */
+  #menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    gap: 10px;
+    padding: 10px 0;
+    margin: 0;
+  }
+
+  #menu ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 5px 0;
+    transition: color 0.2s;
+  }
+
+  #menu ul li a:hover {
+    color: #7a3cff;
+  }
+
+  /* --- Accueil : colonne --- */
+  #accueil {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  #presentation {
+    width: 100%;
+  }
+
+  .photoprofil {
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+  .photoprofil img {
+    width: 150px;
+  }
+
+  /* --- Projets : colonne --- */
+
+ .projet1, .projet2, .projet3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* centre tout à l’intérieur */
+  justify-content: center;
+  text-align: center;
+  gap: 15px;
+  width: 100%;
+  margin: 40px auto;         /* auto = centre le bloc lui-même */
+  padding: 0;                /* supprime les décalages inutiles */
+}
+
+.projet1 img, .projet2 img, .projet3 img {
+  display: block;
+  margin: 0 auto;            /* centre horizontalement */
+  border-radius: 8px;
+  width: 60%;                /* ajuste à ta convenance */
+  height: auto;
+  object-fit: cover;
+}
+
+.txt1, .txt2, .txt3 {
+  width: 60%;                /* garde la même largeur que la photo */
+  margin: 0 auto;            /* centre dans la page */
+  text-align: center;
+}
+
+  /* --- Contact : colonne --- */
+  #contact {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* --- Footer compact --- */
+  .fin-de-page {
+    padding: 20px 0;
+  }
+
+  .card {
+    margin-bottom: 50px;
+  }
+
+  .text1, text2, text3 {
+    text-align: center;
+  }
+
+  .contact-info {
+    display: none;
+  }
+
+}
