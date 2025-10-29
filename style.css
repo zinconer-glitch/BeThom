@@ -755,12 +755,13 @@ li {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 10px;
-  margin-left: 150px;
-  margin-right: 150px;
+  
 }
 
 .titre3 {
+
   text-align: center;
 }
+
 }
   
